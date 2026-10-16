@@ -7,9 +7,10 @@
       "task_id": "shot_01_blizzard_gate",
       "priority": "HIGH",
       "assigned_cluster": "COLAB_GPU_SWARM",
-      "status": "PENDING",
+      "status": "PROCESSING_BY_COLAB",
       "flux_prompt": "Cinematic wide shot, heavy blizzard night, 8-year-old poor boy carrying his 3-year-old sister on his back outside a grand villa gate, cold teal lighting, harsh rim light, 8k",
-      "i2v_prompt": "Slow push-in, heavy falling snow blowing sideways, the boy shivering slightly"
+      "i2v_prompt": "Slow push-in, heavy falling snow blowing sideways, the boy shivering slightly",
+      "claimed_at": "2026-10-16T11:14:28.051141"
     },
     {
       "task_id": "shot_02_steaming_cornbread",
