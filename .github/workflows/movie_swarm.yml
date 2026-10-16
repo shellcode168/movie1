@@ -1,26 +1,39 @@
 name: Infinity Movie Swarm 6-Node Render Farm
+
 on:
   push:
-    paths: ['tasks_queue/current_batch.json']
-  workflow_dispatch:
+    paths:
+      - 'tasks_queue/current_batch.json'
+  schedule:
+    - cron: '*/30 * * * *' # 每30分钟自动检查一次待抢任务
+  workflow_dispatch:        # 支持在 GitHub 网页手动点击触发
 
 permissions:
-  contents: write
+  contents: write           # 必须有写权限，否则无法更新任务单状态
 
 jobs:
   swarm-6nodes-worker:
     runs-on: ubuntu-latest
-    continue-on-error: true
+    continue-on-error: true # 关键：即便抢单撞车退避重试，也不要判定为整条流水线失败
     strategy:
-      fail-fast: false
+      fail-fast: false      # 单个节点退出不影响其余5个节点继续工作
       matrix:
-        node-id: [1, 2, 3, 4, 5, 6]
+        node-id: [1, 2, 3, 4, 5, 6] # 瞬间唤醒 6 台独立虚拟机同时跑
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout Studio Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-      - run: pip install --quiet PyGithub
+
+      - name: Install Dependencies
+        run: pip install --quiet PyGithub requests
+
       - name: Run Swarm Worker
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
