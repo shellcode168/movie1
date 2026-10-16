@@ -27,9 +27,10 @@
       "task_id": "shot_03_frozen_window_study",
       "priority": "NORMAL",
       "assigned_cluster": "GITHUB_ACTIONS_6NODES",
-      "status": "PENDING",
+      "status": "COMPLETED_BY_ACTION_NODE_3",
       "flux_prompt": "Cinematic medium shot, frozen rural school window, 8-year-old boy in patched clothes standing outside in deep snow tracing math on frozen glass",
-      "i2v_prompt": "Smooth tracking shot, frosty breath exhaling, finger moving across window"
+      "i2v_prompt": "Smooth tracking shot, frosty breath exhaling, finger moving across window",
+      "completed_at": "2026-10-16T11:17:03.602528"
     },
     {
       "task_id": "shot_04_sunset_farewell_climax",
