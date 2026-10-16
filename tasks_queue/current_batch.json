@@ -34,9 +34,10 @@
       "task_id": "shot_04_sunset_farewell_climax",
       "priority": "HIGH",
       "assigned_cluster": "COLAB_GPU_SWARM",
-      "status": "PENDING",
+      "status": "PROCESSING_BY_COLAB",
       "flux_prompt": "Wide-angle dramatic shot, dusty rural dirt road at sunset, old farmer falls onto ground reaching hand forward toward car driving away, golden volumetric light",
-      "i2v_prompt": "Dynamic camera pull-out, dust billowing behind car wheels, farmer yelling"
+      "i2v_prompt": "Dynamic camera pull-out, dust billowing behind car wheels, farmer yelling",
+      "claimed_at": "2026-10-16T11:14:33.829370"
     }
   ]
 }
