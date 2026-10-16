@@ -1,0 +1,39 @@
+{
+  "project_id": "LIU_ANSHENG_3MIN_MOVIE",
+  "character_seed": 99281001,
+  "negative_prompt": "blurry, low quality, deformed hands, extra limbs, stiff motion, jerky movement, flickering, bad anatomy, text, watermark",
+  "tasks": [
+    {
+      "task_id": "shot_01_blizzard_gate",
+      "priority": "HIGH",
+      "assigned_cluster": "COLAB_GPU_SWARM",
+      "status": "PENDING",
+      "flux_prompt": "Cinematic wide shot, heavy blizzard night, 8-year-old poor boy carrying his 3-year-old sister on his back outside a grand villa gate, cold teal lighting, harsh rim light, 8k",
+      "i2v_prompt": "Slow push-in, heavy falling snow blowing sideways, the boy shivering slightly"
+    },
+    {
+      "task_id": "shot_02_steaming_cornbread",
+      "priority": "NORMAL",
+      "assigned_cluster": "GITHUB_ACTIONS_6NODES",
+      "status": "PENDING",
+      "flux_prompt": "Cinematic close-up, warm rustic cottage, kind old farmer gently handing steaming hot cornbread to starved boy, warm tungsten lighting",
+      "i2v_prompt": "Static camera, gentle steam curling upwards, boy takes food with trembling hands"
+    },
+    {
+      "task_id": "shot_03_frozen_window_study",
+      "priority": "NORMAL",
+      "assigned_cluster": "GITHUB_ACTIONS_6NODES",
+      "status": "PENDING",
+      "flux_prompt": "Cinematic medium shot, frozen rural school window, 8-year-old boy in patched clothes standing outside in deep snow tracing math on frozen glass",
+      "i2v_prompt": "Smooth tracking shot, frosty breath exhaling, finger moving across window"
+    },
+    {
+      "task_id": "shot_04_sunset_farewell_climax",
+      "priority": "HIGH",
+      "assigned_cluster": "COLAB_GPU_SWARM",
+      "status": "PENDING",
+      "flux_prompt": "Wide-angle dramatic shot, dusty rural dirt road at sunset, old farmer falls onto ground reaching hand forward toward car driving away, golden volumetric light",
+      "i2v_prompt": "Dynamic camera pull-out, dust billowing behind car wheels, farmer yelling"
+    }
+  ]
+}
